@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WaveTune Music</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+        <div class="brand-icon">
+            <i class="fa-solid fa-wave-square"></i>
+        </div>
+
+        <span>WaveTune</span>
+    </div>
+
+
+    <nav>
+
+        <p class="side-title">BROWSE</p>
+
+        <button class="side-link active">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </button>
+
+        <button class="side-link">
+            <i class="fa-solid fa-compass"></i>
+            Discover
+        </button>
+
+        <button class="side-link">
+            <i class="fa-solid fa-user"></i>
+            Artists
+        </button>
+
+        <button class="side-link">
+            <i class="fa-solid fa-compact-disc"></i>
+            Albums
+        </button>
+
+        <button class="side-link">
+            <i class="fa-solid fa-heart"></i>
+            My Library
+        </button>
+
+        <button class="side-link">
+            <i class="fa-solid fa-podcast"></i>
+            Podcast
+        </button>
+
+
+        <p class="side-title space">
+            YOUR MUSIC
+        </p>
+
+        <button class="side-link">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            Recently Played
+        </button>
+
+        <button class="side-link" id="favoritesMenu">
+            <i class="fa-solid fa-star"></i>
+            Favorites
+        </button>
+
+    </nav>
+
+
+    <div class="side-bottom">
+        <i class="fa-solid fa-globe"></i>
+        Online Music
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <div class="tabs">
+
+            <button class="tab active">
+                New Launches
+            </button>
+
+            <button class="tab">
+                Trending
+            </button>
+
+            <button class="tab">
+                Recommended
+            </button>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search anything..."
+                >
+
+            </div>
+
+
+            <button
+                class="icon-btn"
+                id="themeBtn"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+
+            <div class="profile-pic">
+                U
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NEW LAUNCHES ================= -->
+
+    <section class="launch-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h1>
+                    New Launches
+                </h1>
+
+                <p>
+                    Fresh music from around the world
+                </p>
+
+            </div>
+
+
+            <button class="see-all">
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="music-cards"
+            id="musicCards"
+        >
+
+            <div class="loading">
+
+                <div class="loader"></div>
+
+                Loading music...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTENT ================= -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- RECENT PLAYLIST -->
+
+        <div class="recent-section">
+
+            <div class="section-heading small">
+
+                <div>
+
+                    <h2>
+                        Recent Playlist
+                    </h2>
+
+                    <p>
+                        Your online music collection
+                    </p>
+
+                </div>
+
+
+                <button class="see-all">
+                    See all
+                </button>
+
+            </div>
+
+
+            <div class="track-table">
+
+                <div class="table-head">
+
+                    <span>#</span>
+
+                    <span>Song</span>
+
+                    <span>Plays</span>
+
+                    <span>Time</span>
+
+                    <span></span>
+
+                </div>
+
+
+                <div id="songList">
+
+                    <div class="loading">
+
+                        <div class="loader"></div>
+
+                        Loading tracks...
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="load-more"
+                id="loadMoreBtn"
+            >
+                Load More Songs
+            </button>
+
+        </div>
+
+
+        <!-- PODCAST -->
+
+        <aside class="right-content">
+
+            <div class="section-heading small">
+
+                <div>
+
+                    <h2>
+                        Podcast
+                    </h2>
+
+                    <p>
+                        Listen and discover
+                    </p>
+
+                </div>
+
+
+                <button class="see-all">
+                    See all
+                </button>
+
+            </div>
+
+
+            <div class="podcast-grid">
+
+
+                <div class="podcast-card">
+
+                    <div class="podcast-image purple">
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                    </div>
+
+                    <h3>
+                        Music Talks
+                    </h3>
+
+                    <p>
+                        Music & Artists
+                    </p>
+
+                </div>
+
+
+                <div class="podcast-card">
+
+                    <div class="podcast-image orange">
+
+                        <i class="fa-solid fa-headphones"></i>
+
+                    </div>
+
+                    <h3>
+                        Daily Vibes
+                    </h3>
+
+                    <p>
+                        Entertainment
+                    </p>
+
+                </div>
+
+
+                <div class="podcast-card">
+
+                    <div class="podcast-image blue">
+
+                        <i class="fa-solid fa-podcast"></i>
+
+                    </div>
+
+                    <h3>
+                        Sound Stories
+                    </h3>
+
+                    <p>
+                        Creative Talks
+                    </p>
+
+                </div>
+
+
+                <div class="podcast-card">
+
+                    <div class="podcast-image green">
+
+                        <i class="fa-solid fa-wave-square"></i>
+
+                    </div>
+
+                    <h3>
+                        Behind Music
+                    </h3>
+
+                    <p>
+                        Artists & Culture
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<!-- ================= PLAYER ================= -->
+
+<div class="player">
+
+
+    <!-- LEFT -->
+
+    <div class="now-playing">
+
+        <img
+            id="albumCover"
+            src=""
+            alt="Album Cover"
+        >
+
+
+        <div class="now-info">
+
+            <h4 id="playerTitle">
+                Select a song
+            </h4>
+
+            <p id="playerArtist">
+                WaveTune
+            </p>
+
+        </div>
+
+
+        <button
+            class="heart-btn"
+            id="playerFavorite"
+        >
+            <i class="fa-regular fa-heart"></i>
+        </button>
+
+    </div>
+
+
+    <!-- CENTER -->
+
+    <div class="player-center">
+
+
+        <div class="player-buttons">
+
+            <button id="shuffleBtn">
+                <i class="fa-solid fa-shuffle"></i>
+            </button>
+
+
+            <button id="previousBtn">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+
+            <button
+                class="main-play"
+                id="playBtn"
+            >
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+
+            <button id="nextBtn">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+
+            <button id="repeatBtn">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+
+        </div>
+
+
+        <div class="progress-row">
+
+            <span id="currentTime">
+                0:00
+            </span>
+
+
+            <input
+                type="range"
+                id="progress"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+
+            <span id="duration">
+                0:00
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="player-right">
+
+        <button id="autoplayBtn">
+            <i class="fa-solid fa-forward"></i>
+        </button>
+
+
+        <button id="volumeBtn">
+            <i class="fa-solid fa-volume-high"></i>
+        </button>
+
+
+        <input
+            type="range"
+            id="volume"
+            min="0"
+            max="100"
+            value="80"
+        >
+
+    </div>
+
+</div>
+
+
+<!-- AUDIO -->
+
+<audio
+    id="audio"
+    preload="metadata"
+></audio>
+
+
+<!-- TOAST -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Done
+    </span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
